@@ -17,31 +17,31 @@
             </thead>
             <tbody>
             <tr>
-                <td colspan="4"><input type="text" id="result" class="uk-input" v-modle="result"></td>
+                <td colspan="4"><input type="text" id="result" class="uk-input" v-model="result"></td>
             </tr>
             <tr>
-                <td><button type="button" class="uk-button uk-button-default">0</button></td>
-                <td><button type="button" class="uk-button uk-button-default">1</button></td>
-                <td><button type="button" class="uk-button uk-button-default">2</button></td>
-                <td><button type="button" class="uk-button uk-button-danger">C</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(0)">0</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(1)">1</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(2)">2</button></td>
+                <td><button type="button" class="uk-button uk-button-danger" onclick="clearAll">C</button></td>
             </tr>
             <tr>
-                <td><button type="button" class="uk-button uk-button-default">3</button></td>
-                <td><button type="button" class="uk-button uk-button-default">4</button></td>
-                <td><button type="button" class="uk-button uk-button-default">5</button></td>
-                <td><button type="button" class="uk-button uk-button-secondary">+</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(3)">3</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(4)">4</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(5)">5</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" onclick="doCalcButton('+')">&plus;</button></td>
             </tr>
             <tr>
-                <td><button type="button" class="uk-button uk-button-default">6</button></td>
-                <td><button type="button" class="uk-button uk-button-default">7</button></td>
-                <td><button type="button" class="uk-button uk-button-default">8</button></td>
-                <td><button type="button" class="uk-button uk-button-secondary">-</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(6)">6</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(7)">7</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(8)">8</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" onclick="doCalcButton('-')">&minus;</button></td>
             </tr>
             <tr>
-                <td><button type="button" class="uk-button uk-button-secondary">/</button></td>
-                <td><button type="button" class="uk-button uk-button-default">9</button></td>
-                <td><button type="button" class="uk-button uk-button-secondary">*</button></td>
-                <td><button type="button" class="uk-button uk-button-primary">=</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" onclick="doCalcButton('/')">&divide;</button></td>
+                <td><button type="button" class="uk-button uk-button-default" onclick="doCalcButton(9)">9</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" onclick="doCalcButton('*')">&times;</button></td>
+                <td><button type="button" class="uk-button uk-button-primary" onclick="doTotal">=</button></td>
             </tr>
             </tbody>
         </table>
@@ -54,8 +54,13 @@
         data: {
 
         },
+        method: {
+            doCalcButton()
+        },
         computed: {
-
+            result : function () {
+                return
+            }
         }
     });
 </script>
