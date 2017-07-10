@@ -23,43 +23,68 @@
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(0)">0</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(1)">1</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(2)">2</button></td>
-                <td><button type="button" class="uk-button uk-button-danger" @click="clearAll">C</button></td>
+                <td><button type="button" class="uk-button uk-button-danger" @click="allClear">C</button></td>
             </tr>
             <tr>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(3)">3</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(4)">4</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(5)">5</button></td>
-                <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('+')">&plus;</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" @click="plus">&plus;</button></td>
             </tr>
             <tr>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(6)">6</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(7)">7</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(8)">8</button></td>
-                <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('-')">&minus;</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" @click="minus">&minus;</button></td>
             </tr>
             <tr>
-                <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('/')">&divide;</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" @click="divide">&divide;</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(9)">9</button></td>
-                <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('*')">&times;</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" @click="multiply">&times;</button></td>
                 <td><button type="button" class="uk-button uk-button-primary" @click="doTotal">=</button></td>
             </tr>
             </tbody>
         </table>
     </div>
 </body>
-<script src="vue/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
 <script>
     new Vue ({
         el: '#app',
         data: {
-
+            firstdata: 0,
+            seconddata: 0,
+            data: 0
         },
-        method: {
-            doCalcButton()
+        methods: {
+            doCalcButton(input){
+                if(this.firstdata == 0)
+                    this.data = input;
+
+                return this.data;
+            },
+            allClear(){
+                this.data = 0;
+            },
+            plus(){
+              this.data = this.firstdata + this.seconddata;
+            },
+            minus(){
+              this.data = this.firstdata - this.seconddata;
+            },
+            multiply(){
+              this.data = this.firstdata * this.seconddata;
+            },
+            divide(){
+              this.data = this.firstdata / this.seconddata;
+            },
+            doTotal(){
+                return this.data;
+            }
         },
         computed: {
             result : function () {
-                return
+                return this.data;
             }
         }
     });

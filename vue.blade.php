@@ -17,7 +17,23 @@
 
         <h1 :class="className">RED COLOUR</h1>
 
-        <button :disabled="change" @click="onChange"> Click me to change colour </button>
+        <button :disabled="change" @click="onChange"> Click me to Disable </button>
+        <button @click="resetDisable">Reset Disable</button>
+
+        <h1>All Tasks</h1>
+        <ul>
+            <li v-for="task in tasks" v-text="task.description"></li>
+        </ul>
+
+        <h1>Incompleted Tasks</h1>
+        <ul>
+            <li v-for="task in incompletedTasks" v-text="task.description"></li>
+        </ul>
+
+        <h1>completed Tasks</h1>
+        <ul>
+            <li v-for="task in completedTasks" v-text="task.description"></li>
+        </ul>
     </div>
 </body>
 
@@ -30,7 +46,15 @@
            names : ['ram','shyam','hari','sita'],
             title: 'Sushant is a gentleman. :)',
             className: 'colour-red',
-            change: false
+            change: false,
+            tasks: [
+                {description: 'go to store', completed: true },
+                {description: 'Finish screencast', completed: false},
+                {description: 'Make Donation', completed: false},
+                {description: 'Clear inbox', completed: false},
+                {description: 'Make dinner', completed: true},
+                {description: 'Clean room', completed: true},
+            ]
         },
         methods : {
             addName () {
@@ -39,6 +63,19 @@
             },
             onChange () {
                 this.change = true;
+                this.className = 'colour-blue'
+            },
+            resetDisable () {
+                this.change = false;
+                this.className = 'colour-red'
+            }
+        },
+        computed: {
+           incompletedTasks: function (){
+                return this.tasks.filter(tasks => ! tasks.completed);
+            },
+            completedTasks: function (){
+               return this.tasks.filter(tasks => tasks.completed);
             }
         }
     });
