@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="621333ce-bdf1-4042-9213-546e7ad018d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/learn-vue.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calculator.blade.php" afterPath="$PROJECT_DIR$/calculator.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue.blade.php" afterPath="$PROJECT_DIR$/vue.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,24 +15,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="calculator.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="calculator.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/calculator.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="90" selection-end-column="9" />
+            <state relative-caret-position="247">
+              <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
               <folding>
-                <element signature="e#1768#1774#1#HTML" expanded="true" />
-                <marker date="1499708132218" expanded="true" signature="3875:3922" ph="..." />
+                <element signature="e#1781#1787#1#HTML" expanded="true" />
+                <marker date="1499709862844" expanded="true" signature="3610:3658" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calc.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calc.html" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/calc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2997">
-              <caret line="72" column="12" lean-forward="true" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
+            <state relative-caret-position="301">
+              <caret line="266" column="42" lean-forward="false" selection-start-line="266" selection-start-column="42" selection-end-line="266" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -54,7 +51,7 @@
       <file leaf-file-name="vue.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="-170">
               <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="79" />
               <folding />
             </state>
@@ -270,12 +267,12 @@
       <updated>1499520998562</updated>
       <workItem from="1499521000008" duration="14775000" />
       <workItem from="1499611825400" duration="7019000" />
-      <workItem from="1499698703096" duration="8803000" />
+      <workItem from="1499698703096" duration="10122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30597000" />
+    <option name="totallyTimeSpent" value="31916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -455,9 +452,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/calc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="266" column="42" lean-forward="false" selection-start-line="266" selection-start-column="42" selection-end-line="266" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vue.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="-170">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="79" />
           <folding />
         </state>
@@ -465,20 +470,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calculator.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="90" selection-end-column="9" />
+        <state relative-caret-position="247">
+          <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
           <folding>
-            <element signature="e#1768#1774#1#HTML" expanded="true" />
-            <marker date="1499708132218" expanded="true" signature="3875:3922" ph="..." />
+            <element signature="e#1781#1787#1#HTML" expanded="true" />
+            <marker date="1499709862844" expanded="true" signature="3610:3658" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/calc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2997">
-          <caret line="72" column="12" lean-forward="true" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>

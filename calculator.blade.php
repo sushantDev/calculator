@@ -29,18 +29,18 @@
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(3)">3</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(4)">4</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(5)">5</button></td>
-                <td><button type="button" class="uk-button uk-button-secondary" @click="plus">&plus;</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('+')">&plus;</button></td>
             </tr>
             <tr>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(6)">6</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(7)">7</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(8)">8</button></td>
-                <td><button type="button" class="uk-button uk-button-secondary" @click="minus">&minus;</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('-')">&minus;</button></td>
             </tr>
             <tr>
-                <td><button type="button" class="uk-button uk-button-secondary" @click="divide">&divide;</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('/')">&divide;</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(9)">9</button></td>
-                <td><button type="button" class="uk-button uk-button-secondary" @click="multiply">&times;</button></td>
+                <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('*')">&times;</button></td>
                 <td><button type="button" class="uk-button uk-button-primary" @click="doTotal">=</button></td>
             </tr>
             </tbody>
@@ -52,39 +52,28 @@
     new Vue ({
         el: '#app',
         data: {
-            firstdata: 0,
-            seconddata: 0,
-            data: 0
+            data: 0,
+            total : 0
         },
         methods: {
             doCalcButton(input){
-                if(this.firstdata == 0)
-                    this.data = input;
-
-                return this.data;
+                this.data = input;
+                this.data += input;
+                this.data += input;
+                this.total = eval(this.data);
+                return this.total;
             },
             allClear(){
                 this.data = 0;
-            },
-            plus(){
-              this.data = this.firstdata + this.seconddata;
-            },
-            minus(){
-              this.data = this.firstdata - this.seconddata;
-            },
-            multiply(){
-              this.data = this.firstdata * this.seconddata;
-            },
-            divide(){
-              this.data = this.firstdata / this.seconddata;
+                this.total = 0;
             },
             doTotal(){
-                return this.data;
+                return this.total;
             }
         },
         computed: {
             result : function () {
-                return this.data;
+                return this.total;
             }
         }
     });
