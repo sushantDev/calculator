@@ -15,13 +15,13 @@
 <body>
 
 <div id="app" class="container">
-    <coupon v-on:applied="onCouponApplied"></coupon>
+    <coupon @applied="onCouponApplied"></coupon>
     <h1 v-if="couponApplied">Congrats!! You used the coupon.</h1>
 </div>
 
 <script src="vue/vue.js"></script>
 <script>
-    Window.Event = new class {
+    window.Event = new class {
         constructor(){
             this.vue = new Vue();
         }
@@ -31,7 +31,7 @@
         }
 
         listen (event, callback){
-            this.vue.$on(event, callback)
+            this.vue.$on(event, callback);
         }
     }
 
@@ -48,6 +48,11 @@
         el: '#app',
         data: {
             couponApplied: false
+        },
+        methods: {
+            onCouponApplied(){
+                this.couponApplied = true;
+            }
         },
         created(){
             Event.listen('applied', () => alert('Handling it!'));
