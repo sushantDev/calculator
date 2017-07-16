@@ -5,6 +5,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css">
+
     <title>Vue learn</title>
 </head>
 <body>
@@ -15,6 +17,8 @@
         <sushant>Sushant</sushant>
 
         <task-list></task-list>
+
+        <sushant-message title="hello World" body="I am a good boy."></sushant-message>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>

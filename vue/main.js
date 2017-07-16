@@ -22,6 +22,25 @@ Vue.component('task-list', {
     }
 });
 
+Vue.component('sushant-message', {
+    data() {
+      return {
+          isVisible: true
+      }
+    },
+    props: ['title', 'body'],
+    template: ' <article class="message" v-show="isVisible">' +
+    '<div class="message-header">' +
+    '<p>{{ title }}</p>' +
+    '<button @click="isVisible = false" class="delete"></button>' +
+    '</div>' +
+    '<div class="message-body">' +
+    '{{ body }}' +
+    '</div>' +
+    '</article>'
+});
+
+
 new Vue({
     el: '#app'
-})
+}) 

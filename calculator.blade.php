@@ -17,7 +17,7 @@
             </thead>
             <tbody>
             <tr>
-                <td colspan="4"><input type="text" id="result" class="uk-input" v-model="result"></td>
+                <td colspan="4"><input type="text" id="result" class="uk-input" v-model="query"></td>
             </tr>
             <tr>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(0)">0</button></td>
@@ -41,39 +41,28 @@
                 <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('/')">&divide;</button></td>
                 <td><button type="button" class="uk-button uk-button-default" @click="doCalcButton(9)">9</button></td>
                 <td><button type="button" class="uk-button uk-button-secondary" @click="doCalcButton('*')">&times;</button></td>
-                <td><button type="button" class="uk-button uk-button-primary" @click="doTotal">=</button></td>
+                <td><button type="button" class="uk-button uk-button-primary" @click="calculate()">=</button></td>
             </tr>
             </tbody>
         </table>
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+<script src="vue/vue.min.js"></script>
 <script>
     new Vue ({
         el: '#app',
         data: {
-            data: 0,
-            total : 0
+            query: ''
         },
         methods: {
             doCalcButton(input){
-                this.data = input;
-                this.data += input;
-                this.data += input;
-                this.total = eval(this.data);
-                return this.total;
+                this.query += input;
             },
             allClear(){
-                this.data = 0;
-                this.total = 0;
+                this.query = 0;
             },
-            doTotal(){
-                return this.total;
-            }
-        },
-        computed: {
-            result : function () {
-                return this.total;
+            calculate(){
+                eval(this.query);
             }
         }
     });
