@@ -21,7 +21,7 @@
             <template slot="content">My name is sushant</template>
             <template slot="footer">
                 <a class="button is-success">Save changes</a>
-                <a class="button">Cancel</a>
+                <a class="button" @click="isVisible = false">Cancel</a>
             </template>
         </modal>
     </div>
